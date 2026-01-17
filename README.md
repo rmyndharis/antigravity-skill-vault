@@ -98,7 +98,30 @@ npx github:rmyndharis/antigravity-skill-vault install <skill-name> --global
 npx github:rmyndharis/antigravity-skill-vault install bash-pro --global
 ```
 
-**4. Install ALL skills:**
+**4. Check installed skills:**
+
+```bash
+# List local specific skills
+npx github:rmyndharis/antigravity-skill-vault installed
+
+# List globally installed skills
+npx github:rmyndharis/antigravity-skill-vault installed --global
+```
+
+**5. Update installed skills:**
+
+```bash
+# Update a specific skill
+npx github:rmyndharis/antigravity-skill-vault update <skill-name>
+
+# Update ALL installed skills
+npx github:rmyndharis/antigravity-skill-vault update
+
+# Update global skills
+npx github:rmyndharis/antigravity-skill-vault update --global
+```
+
+**6. Install ALL skills:**
 
 ```bash
 # To your current workspace

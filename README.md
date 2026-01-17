@@ -65,27 +65,63 @@ ANTIGRAVITY automatically activates a skill when your request matches its descri
 
 ---
 
-## 📥 Installation
-
 You can install skills in **two scopes**:
 
 -   **Workspace scope** (project-specific): `<workspace-root>/.agent/skills/`
 -   **Global scope** (available in all projects): `~/.gemini/antigravity/skills/`
 
-### Option A — Install to a workspace (Recommended for teams)
+### Using `npx` (Recommended)
 
-From your project root:
+You can easily install skills directly from the repository without cloning it manually.
+
+**1. Install a specific skill to your current project:**
+
+```bash
+npx github:rmyndharis/antigravity-skill-vault install <skill-name>
+# Example:
+npx github:rmyndharis/antigravity-skill-vault install bash-pro
+```
+
+**2. Install a skill globally:**
+
+```bash
+npx github:rmyndharis/antigravity-skill-vault install <skill-name> --global
+# Example:
+npx github:rmyndharis/antigravity-skill-vault install bash-pro --global
+```
+
+**3. Install ALL skills:**
+
+```bash
+# To your current workspace
+npx github:rmyndharis/antigravity-skill-vault install --all
+
+# Globally
+npx github:rmyndharis/antigravity-skill-vault install --all --global
+```
+
+**4. List available skills:**
+
+```bash
+npx github:rmyndharis/antigravity-skill-vault list
+```
+
+### Manual Installation
+
+If you prefer to clone the repository:
+
+**Option A — Install to a workspace**
 
 ```bash
 mkdir -p .agent/skills
-cp -R /path/to/antigravity-skill-vault/skills/* .agent/skills/
+cp -R /path/to/antigravity-skill-vault/skills/<skill-name> .agent/skills/
 ```
 
-### Option B — Install globally (Personal toolbox)
+**Option B — Install globally**
 
 ```bash
 mkdir -p ~/.gemini/antigravity/skills
-cp -R /path/to/antigravity-skill-vault/skills/* ~/.gemini/antigravity/skills/
+cp -R /path/to/antigravity-skill-vault/skills/<skill-name> ~/.gemini/antigravity/skills/
 ```
 
 > **Note:** After copying skills, restart your agent session so Antigravity re-detects them.
